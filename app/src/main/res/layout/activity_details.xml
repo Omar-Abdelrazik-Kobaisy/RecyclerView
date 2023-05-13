@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".DetailsActivity">
+    tools:context=".UI.DetailsActivity"
+    android:background="@drawable/bg">
 
     <ImageView
         android:id="@+id/call_pic"
@@ -16,7 +17,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_margin="55dp"
+        android:layout_marginTop="220dp"
         android:contentDescription="TODO" />
 
     <TextView

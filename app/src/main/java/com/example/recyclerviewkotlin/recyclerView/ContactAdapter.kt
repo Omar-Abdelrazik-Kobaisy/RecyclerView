@@ -1,11 +1,7 @@
-package com.example.recyclerviewkotlin
+package com.example.recyclerviewkotlin.recyclerView
 
 import android.view.LayoutInflater
-import android.view.View
-import android.view.View.OnClickListener
 import android.view.ViewGroup
-import android.widget.ImageView
-import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.recyclerviewkotlin.databinding.ContactItemBinding
 
@@ -18,7 +14,7 @@ class ContactAdapter(var items : List<ContactItem>)
 //    {
 //        this.items = items
 //    }
-    var onItemClickListener :OnItemClickListener? = null
+    var onItemClickListener : OnItemClickListener? = null
     class ItemViewHolder(val itemViewbinder :ContactItemBinding) : RecyclerView.ViewHolder(itemViewbinder.root){
 
 
@@ -49,7 +45,7 @@ class ContactAdapter(var items : List<ContactItem>)
 
     override fun onBindViewHolder(holder: ItemViewHolder, position: Int) {
 //        TODO("Not yet implemented")
-        val item :ContactItem = items.get(position)
+        val item : ContactItem = items.get(position)
         //Data_Binding
 //        if(item.contact_img != null)
 //        holder.contact_img.setImageResource(item.contact_img)
