@@ -1,17 +1,19 @@
-package com.example.recyclerviewkotlin
+package com.example.recyclerviewkotlin.UI
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
-import androidx.recyclerview.widget.RecyclerView
+import com.example.recyclerviewkotlin.R
 import com.example.recyclerviewkotlin.databinding.ActivityMainBinding
+import com.example.recyclerviewkotlin.recyclerView.ContactAdapter
+import com.example.recyclerviewkotlin.recyclerView.ContactItem
 
 class MainActivity : AppCompatActivity() {
     //lateinit var recyclerView :RecyclerView
     lateinit var binding: ActivityMainBinding
     lateinit var items : MutableList<ContactItem>
-    lateinit var adapter :ContactAdapter
+    lateinit var adapter : ContactAdapter
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 //setContentView(R.layout.activity_main)
@@ -26,10 +28,10 @@ class MainActivity : AppCompatActivity() {
 //            }
 //
 //        }
-        adapter.onItemClickListener =  object :ContactAdapter.OnItemClickListener{
+        adapter.onItemClickListener =  object : ContactAdapter.OnItemClickListener{
             override fun onItemClick(item: ContactItem) {
 //                TODO("Not yet implemented")
-                val intent:Intent = Intent(this@MainActivity,DetailsActivity::class.java)
+                val intent:Intent = Intent(this@MainActivity, DetailsActivity::class.java)
         intent.putExtra("img",item.contact_img)
         intent.putExtra("name",item.title)
         startActivity(intent)
@@ -56,7 +58,7 @@ class MainActivity : AppCompatActivity() {
                     R.drawable.ic_blue_dial
                 )
             )
-            items.add(ContactItem(R.drawable.ic_contact,"Contact $i",R.drawable.ic_dial))
+            items.add(ContactItem(R.drawable.ic_contact,"Contact $i", R.drawable.ic_dial))
         }
     }
 //
