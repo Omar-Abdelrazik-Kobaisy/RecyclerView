@@ -28,6 +28,7 @@ class MainActivity : AppCompatActivity() {
 //            }
 //
 //        }
+        //edit to test git
         adapter.onItemClickListener =  object : ContactAdapter.OnItemClickListener{
             override fun onItemClick(item: ContactItem) {
 //                TODO("Not yet implemented")
